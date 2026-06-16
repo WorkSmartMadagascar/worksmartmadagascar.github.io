@@ -25,6 +25,7 @@
 
 const API = "https://worksmart-backend-wtwh.onrender.com";
 
+// ---------------- ADD EMPLOYEE ----------------
 function addEmployee() {
 
     fetch(API + "/employees", {
@@ -54,9 +55,9 @@ function addEmployee() {
         alert("❌ Erreur: " + err.message);
         console.log(err);
     });
-
 }
 
+// ---------------- LOAD EMPLOYEES ----------------
 function loadEmployees() {
 
     fetch(API + "/employees")
@@ -73,8 +74,7 @@ function loadEmployees() {
 
             let li = document.createElement("li");
 
-            // sécurité si structure change
-            li.innerText = (e[1] || "??") + " - " + (e[2] || "??");
+            li.innerText = e.matricule + " - " + e.nom;
 
             list.appendChild(li);
         });
@@ -84,7 +84,6 @@ function loadEmployees() {
         alert("❌ Impossible de charger: " + err.message);
         console.log(err);
     });
-
 }
 
 </script>
