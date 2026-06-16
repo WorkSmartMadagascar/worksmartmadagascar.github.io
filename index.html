@@ -15,13 +15,16 @@
 
 <button onclick="addEmployee()">Ajouter</button>
 
-<h2>Liste</h2>
-<button onclick="loadEmployees()">Afficher</button>
+<hr>
+
+<button onclick="loadEmployees()">Charger liste</button>
 
 <ul id="list"></ul>
 
 <script>
-const API = "https://TON-SERVEUR.onrender.com"; // à changer
+
+const API = "https://TON-RENDER-URL.onrender.com"; 
+// ⚠️ remplace par ton lien Render
 
 function addEmployee() {
     fetch(API + "/employees", {
@@ -54,6 +57,7 @@ function loadEmployees() {
         });
     });
 }
+
 </script>
 
 </body>
