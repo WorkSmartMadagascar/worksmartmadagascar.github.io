@@ -1,9 +1,10 @@
+import MainLayout from "../layouts/MainLayout";
+
 export default function Dashboard() {
   return (
-    <div style={{ padding: 40 }}>
+    <MainLayout>
       <h1>Dashboard DPMS</h1>
-
-      <p>Bienvenue dans Dry Process Management System</p>
-    </div>
+      <p>Bienvenue dans le système de production</p>
+    </MainLayout>
   );
 }
