@@ -1,4 +1,4 @@
-import MainLayout from "../layouts/MainLayout";
+import MainLayout from "src/layouts/MainLayout.jsx";
 
 export default function Dashboard() {
   return (
