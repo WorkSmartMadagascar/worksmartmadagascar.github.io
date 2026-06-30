@@ -1,11 +1,19 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Login() {
   const [user, setUser] = useState("");
+  const navigate = useNavigate();
+
+  const handleLogin = () => {
+    if (user.trim() !== "") {
+      navigate("/dashboard");
+    }
+  };
 
   return (
     <div style={{ padding: 40 }}>
-      <h2>WorkSmart DPMS Login</h2>
+      <h2>DPMS Login</h2>
 
       <input
         placeholder="Utilisateur"
@@ -15,7 +23,7 @@ export default function Login() {
 
       <br /><br />
 
-      <button onClick={() => alert("Login en V0.2")}>
+      <button onClick={handleLogin}>
         Connexion
       </button>
     </div>
